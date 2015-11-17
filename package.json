@@ -1,0 +1,36 @@
+{
+  "name": "fhir-validation.js",
+  "version": "0.0.1",
+  "devDependencies": {
+    "webpack-dev-server": "latest"
+  },
+  "description": "FHIR javascript validation library",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:FHIR/fhir-validation.js.git"
+  },
+  "scripts": {
+  },
+  "keywords": [
+    "fhir",
+    "FHIR"
+  ],
+  "author": [
+    "Nikolay Ryzhikov <niquola@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FHIR/fhir-validation.js/issues"
+  },
+  "homepage": "https://github.com/FHIR/fhir-validation.js",
+  "dependencies": {
+    "coffee": "latest",
+    "coffee-script": "latest",
+    "mocha": "latest"
+  },
+  "scripts": {
+    "publish": "coffee -o lib/ -c src/ && npm publish",
+    "test": "node_modules/mocha/bin/mocha --compilers mocha --compilers coffee:coffee-script/register  --recursive"
+  },
+  "files": ["bin", "lib", "src"]
+}
